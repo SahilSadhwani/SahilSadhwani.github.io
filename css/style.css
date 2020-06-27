@@ -389,6 +389,8 @@ About
 margin-bottom: 16px;
     font-size: 22px;
     color: #666;
+    text-align:justify;
+    
 }
 
 .about-content ul li {
