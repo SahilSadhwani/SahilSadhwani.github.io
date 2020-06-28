@@ -257,15 +257,7 @@ var $skillSection = $('#skill-section-container');
 /******* Contact form ******/ 
     
 
-       
 
-    $("#form-send").click(function(e){
-        var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        
-      if($("#name").val()!=='' && $("#email").val()!=='' && $("#message").val()!==''){
-          alert("Server issue! Email Unsuccessfull in reaching out.");
-      }                  
-    });
     
     
     

@@ -109,14 +109,14 @@
         <div class="home-content-box">
             <div class="home-content-box-inner text-center">
                <div class="home-btn animated zoomIn">
-                   <img src="img/PhotoGrid_1584365427950.png" alt="Sahil Sadhwani" class="img-responsive img-circle">
+                   <img src="img/PhotoGrid_1584365427950%20(1).png" alt="Sahil Sadhwani" class="img-responsive img-circle">
                     </div>
                 <div class="home-heading">
                         <h3 class="text-heading animated zoomIn">Hello, I'm Sahil Sadhwani</h3>
                         <br>
                         
                         <h4 class="typer-parent animated zoomIn">I'm Good in Creating
-                        <span class="typer" id="main" data-words=" Web Applications, Standalone Applications, Database Desgin" data-delay="80" data-deleteDelay="500" data-colors="#bfbfbfx;"></span>
+                        <span class="typer" id="main" data-words=" Web Applications, Desktop Applications, Database Desgin" data-delay="80" data-deleteDelay="500" data-colors="#bfbfbfx;"></span>
                           <span class="cursor" data-owner="main"></span>
                         </h4>
                         <a download href="files/SahilSadhwani.pdf" class="animated zoomIn btn btn-cv effect">Download Resume</a>
@@ -138,7 +138,7 @@
                 <div class="content-title-underline"></div>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row animated fadeInUp wow">
 
                 <div class="col-xs-12 col-md-6">
                     <div class="about-content">
@@ -239,7 +239,7 @@
                 <div class="content-title-underline"></div>
         </div>
 		<div class="container">
-			<div class="row">
+			<div class="row animated fadeInUp wow">
 				<div class="col-sm-12 col-md-3">
 					<div class="content-title">
 					
@@ -291,11 +291,11 @@
 <!--SKILL SECTION-->
 <section id="skill" class="skill-section">
     <div class="content-box">
-        <div class="content-title animated fadeInDown wow" data-wow-duration="1s" data-wow-delay=".3s">
+        <div class="content-title" data-wow-duration="1s" data-wow-delay=".3s">
              <h3 class="text-heading">Professional Skills</h3>
                 <div class="content-title-underline"></div>
         </div>
-        <div class="container">
+        <div class="container animated fadeInUp wow">
 <!--        <div class="row skill-row">-->
            
             <div class="row" id="skill-section-container">
@@ -547,7 +547,7 @@
              <h3 class="text-heading">Contact Me</h3>
                 <div class="content-title-underline"></div>
         </div><!--content title-->
-       <div class="container">
+       <div class="container animated fadeInUp wow">
                 <div class="col-xs-12 col-md-12 col-md-offset-1">
                     <div class="row">
                     <div class="col-xs-12 col-sm-4">
@@ -587,14 +587,14 @@
                     </div>
                 </div>
             </div><!-- end row -->
- <div class="container">
+ <div class="container animated fadeInUp wow">
           
     <div class="col-xs-12 col-md-12 col-md-offset-1">
-                    <form id="contact-form" method="post">
+<!--                    <form id="contact-form" method="post">-->
                     
                      <div class="row">
                         <div class="col-sm-6">
-                            <input type="text" name="name" id="name" class="input-field" placeholder="Name" required="required">
+                            <input type="text" name="name" id="name" class="input-field" placeholder="Full Name" required="required">
                             <span class="name-error text-center mb-30"></span>
                         </div>
                         <div class="col-sm-6">
@@ -612,9 +612,19 @@
                         
                          </div>
                          <div class="row">
-                             <button type="submit" class="btn effect submit-btn" id="form-send">Send Message</button>
+                             <button onclick="sendMail()" class="btn effect submit-btn" id="form-send">Send Message</button>
                          </div>
-                    </form>
+                         
+                           <div id="msgSubmit" class="h3 text-center" style="display:none; margin-top: 15px;">
+											<p id="textSuccess" style="color: #232323;">Thankyou for Connecting, I will be contacting you soon.</p>
+										</div>
+                    
+                    <div id="msgFail" class="h3 text-center" style="display: none; margin-top: 15px;">
+											<p id="textSuccess" style="color: #232323;">Error: Details not sent.</p>
+										</div>  
+                     
+                         
+<!--                    </form>-->
             
             
             <!-- end row -->
@@ -656,6 +666,43 @@
    
    
     <!--SCRIPTS-->
+    
+    
+    
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+	function sendMail(){
+//		console.log("here!");
+		var name=document.getElementById("name").value;
+
+		var email=document.getElementById("email").value;
+		var msg=document.getElementById("message").value;
+//		console.log(name + email + msg);
+		Email.send({
+			    SecureToken : "68f35e28-9c9c-4a80-b226-320fc7c874e5",
+    			To : 'sadhwanisahil64@gmail.com',
+				From : "sadhwanisahil64@gmail.com",
+				Subject : "Enquiry from " + name ,
+				Body : name + "(" + email +")" + " left his contact details and a message for you on your portfolio. The message says " +msg 
+			}).then(
+            message => {
+//                alert(message)
+            if(message == "OK"){
+                 document.getElementById("msgSubmit").style.display="block"
+            }else{
+                document.getElementById("msgFail").style.display="block"
+            }
+            }
+			
+				
+			);
+	}
+	</script>
+    
+    
+    
+    
 
     <!--CORE JS-->
     <!--JQUERY script-->
