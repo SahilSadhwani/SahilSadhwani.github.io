@@ -498,8 +498,52 @@ var $skillSection = $('#skill-section-container');
     }
       
     
-    
 
+    
+    
+    $('#contact-form').submit(function(e){
+        e.preventDefault();
+        
+        var name=document.getElementById("name").value;
+        
+		var email=document.getElementById("email").value;
+		var msg=document.getElementById("message").value;
+//		console.log(name + email + msg);
+        if(name !== "" && email !== "" && msg !== ""){
+            Email.send({
+			    SecureToken : "68f35e28-9c9c-4a80-b226-320fc7c874e5",
+    			To : 'sadhwanisahil64@gmail.com',
+				From : "sadhwanisahil64@gmail.com",
+				Subject : "Enquiry from " + name ,
+				Body : name + "(" + email +")" + " left his contact details and a message for you on your portfolio. The message says " +msg 
+			}).then(
+            message => {
+//                alert(message)
+            if(message == "OK"){
+                document.getElementById("msgFail").style.display="none"
+                document.getElementById("incomplete").style.display="none"
+                 document.getElementById("msgSubmit").style.display="block"
+            }else{
+                document.getElementById("incomplete").style.display="none"
+                document.getElementById("msgSubmit").style.display="none"
+                document.getElementById("msgFail").style.display="block"
+            }
+            }
+			
+				
+			);
+        }else{
+            document.getElementById("msgSubmit").style.display="none"
+            document.getElementById("msgFail").style.display="none"
+            document.getElementById("incomplete").style.display="block"
+        }
+        
+        
+    });
+
+    
+    
+    
     
     
     
