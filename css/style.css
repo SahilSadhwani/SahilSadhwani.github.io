@@ -51,7 +51,8 @@ section{
 /*===================================================================================================================================                                    FONT COLOR SETTINGS                                                                               
 ===================================================================================================================================*/
 .text-heading{
-    color: #333;
+/*    color: #333;*/
+    color: #C45911;
     text-transform: uppercase;
 }
 .text-content{
@@ -349,9 +350,10 @@ video{
 }
 
 .btn-cv:hover{
-    background: #fff;
-    color: #333;
-    background-color: #fff;
+    background: #C45911;
+    color: #fff;
+    background-color: #C45911;
+    border-color: #C45911;
 }
 
 
@@ -427,7 +429,7 @@ margin-bottom: 16px;
 }
 .social-list li:hover a {
 	color: #fafafa;
-	background-color: #232323;
+	background-color: #C45911;
 	border-color: transparent;
 }
 
@@ -757,9 +759,9 @@ textarea.input-field {
 	cursor: pointer;
 }
 .submit-btn:hover {
-	color: #232323;
-	background-color: transparent;
-    border: solid 1px #232323;
+	color: #fff;
+	background-color: #C45911;
+    border: solid 1px #C45911;
 }
 
 
@@ -794,7 +796,7 @@ textarea.input-field {
     margin: 0 9px;
 }
 .footer-social-list li a:hover {
-	color: #111;
+	color: #C45911;
 }
 .footer .copy-text {
     margin: 8px 0;
@@ -838,8 +840,9 @@ textarea.input-field {
 }
 .btn-black:hover,
 .btn-black:focus{
-    background: #222;
+    background: #C45911;
     color: #FFF;
+    border-color: #C45911;
 }
 
 .btn-back-to-top{

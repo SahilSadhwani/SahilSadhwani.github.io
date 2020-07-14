@@ -545,6 +545,12 @@ var $skillSection = $('#skill-section-container');
     
     
     
+    //hiding navbar collapse on click
+    $('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+    
+    
     
     
     
