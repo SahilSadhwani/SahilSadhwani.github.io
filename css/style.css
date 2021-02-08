@@ -368,6 +368,10 @@ video{
 /*----------------------------------------
 About
 ----------------------------------------*/
+#about {
+    background: #eee;
+}
+
 .about-content{
 /*
     border: solid 2px #eee;
@@ -386,6 +390,7 @@ About
 	margin-bottom: 30px;
 	text-transform: capitalize;
     font-size: 32px;
+    color: #41464B;
 }
 .about-content p {
 margin-bottom: 16px;
@@ -402,7 +407,8 @@ margin-bottom: 16px;
 }
 .about-content ul li span {
 	font-weight: 700;
-	color: #232323;
+/*	color: #232323;*/
+    color: #41464B;
 }
 .about-content ul li span i {
 	margin-right: 4px;
@@ -483,7 +489,7 @@ margin-bottom: 16px;
 ===================================================================================================================================*/
 
 .education-section{
-    background: #eee;
+/*    background: #eee;*/
 }
 
 
@@ -520,6 +526,33 @@ margin-bottom: 16px;
 
 
 
+
+/*===================================================================================================================================                                    EXPERIENCE SECTION CSS                                                                                   
+===================================================================================================================================*/
+
+.experience-section {
+    background: #eee;
+    width: 100%;
+/*    height: 80%;*/
+}
+
+
+
+.company-details {
+    color: #41464B;
+}
+
+
+.company-details .company-name {
+    color: #41464B;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.company-details span {
+    font-weight: 600;
+}
 
 
 
