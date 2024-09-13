@@ -277,7 +277,7 @@ var $skillSection = $('#skill-section-container');
         labels: ['Java', 'C', 'Python'],
         datasets: [{
             label: 'Core Technologies',
-            data: [8, 5, 4],
+            data: [8, 5.5, 4],
             backgroundColor: [
                 'rgba(0, 0, 0, 0.8)',
                 'rgba(0, 0, 0, 0.6)',
@@ -387,10 +387,10 @@ var $skillSection = $('#skill-section-container');
       var myChart4 = new Chart(ctx4, {
     type: 'bar',
     data: {
-        labels: ['Laravel', 'Angular', 'Reactjs', 'React Native'],
+        labels: ['Spring Boot', 'ReactJS', 'Laravel', 'React Native'],
         datasets: [{
             label: 'Frameworks',
-            data: [7, 6.5, 8, 6],
+            data: [8.3, 8, 7, 6],
             backgroundColor: [
                 'rgba(0, 0, 0, 0.8)',
                 'rgba(0, 0, 0, 0.6)',
@@ -446,16 +446,18 @@ var $skillSection = $('#skill-section-container');
       var myChart5 = new Chart(ctx5, {
     type: 'bar',
     data: {
-        labels: ['PHP','Nodejs', 'MySQL'],
+        labels: ['PHP','Nodejs', 'SQL', 'AWS'],
         datasets: [{
             label: 'Miscellaneous',
-            data: [9, 7, 7],
+            data: [9, 7, 7.5, 6.2],
             backgroundColor: [
                 'rgba(0, 0, 0, 0.8)',
                 'rgba(0, 0, 0, 0.6)',
-                'rgba(0, 0, 0, 0.4)'
+                'rgba(0, 0, 0, 0.4)',
+                'rgba(0, 0, 0, 0.2)'
             ],
             borderColor: [
+                'rgba(0, 0, 0, 0)',
                 'rgba(0, 0, 0, 0)',
                 'rgba(0, 0, 0, 0)',
                 'rgba(0, 0, 0, 0)'
